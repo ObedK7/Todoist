@@ -1,0 +1,277 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-size: 12px;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+.aside-menu {
+  display: none;
+}
+
+aside {
+  display: none;
+}
+
+.navbar a {
+  text-decoration: none;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+  gap: 3em;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.12);
+}
+
+#overview {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  border: 0px solid black;
+  border-radius: 0.5em;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.12);
+}
+
+.first-column {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  margin-top: 0;
+}
+
+.total {
+  background-color: rgb(226, 248, 248);
+}
+
+.complete {
+  background-color: rgb(206, 255, 206);
+}
+
+.second-column {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  margin-top: 0;
+}
+
+.important {
+  background-color: rgb(255, 244, 224);
+}
+
+.due-today {
+  background-color: rgb(234, 234, 253);
+}
+
+h2 {
+  margin-bottom: 5px;
+  font-size: 1.75em;
+}
+
+img {
+  width: 30%;
+  height: 30%;
+  border-radius: 50%;
+}
+
+#add,
+#addBtn,
+#search-btn {
+  background-color: rgb(147, 99, 244);
+  color: white;
+  border: none;
+  border-radius: 0.25em;
+  cursor: pointer;
+  box-shadow: 0 8px 10px rgba(0, 0, 0, 0.12);
+}
+
+#add {
+  width: 20%;
+}
+
+.task-details {
+  background-color: white;
+}
+
+#search-btn {
+  width: 20%;
+}
+
+.total,
+.complete,
+.important,
+.due-today {
+  font-family: sans-serif;
+  display: flex;
+  font-size: 1.5em;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 0.5em;
+  height: 50%;
+  width: 50%;
+  border: 0px solid black;
+  border-radius: 0.5em;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.12);
+  padding: 1em;
+  margin: 7px;
+}
+
+.total span,
+.complete span,
+.important span,
+.due-today span {
+  margin-top: 5px;
+}
+
+.total p,
+.complete p,
+.important p,
+.due-today p {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+#headers {
+  padding: 0.5em;
+}
+
+#action-btn {
+  max-width: 50%;
+  gap: 10px;
+  display: flex;
+}
+
+.task-info,
+#task {
+  padding: 0.7em;
+}
+
+.task-details {
+  border: 0px solid black;
+  padding: 0.25em;
+  border-radius: 0.25em;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.12);
+}
+
+#task {
+  text-decoration: none;
+  list-style: none;
+  border: 0px solid black;
+  border-radius: 0.25em;
+  font-size: 1.15em;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+}
+
+.task-header h1 {
+  font-size: 20px;
+  margin-bottom: 0;
+}
+
+.task-header p {
+  margin-top: 5px;
+}
+
+#task-input {
+  margin-bottom: 15px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 10px;
+}
+
+input[type="text"] {
+  width: 80%;
+  height: 1.9em;
+  padding-left: 10px;
+  border: 1px solid black;
+  border-radius: 0.2rem;
+}
+
+#task-input #add {
+  height: 2.25em;
+}
+
+#task-input,
+#task {
+  margin: 10px;
+}
+
+#search-header {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding-left: 0.75em;
+  margin-bottom: 10px;
+  gap: 2px;
+}
+
+#search {
+  width: 70%;
+  height: 1.9em;
+  padding: 0.9em;
+  margin: 0 6.5px 0 3px;
+  border: 1px solid black;
+  border-radius: 0.2rem;
+}
+
+#search-btn {
+  height: 2em;
+}
+
+.dark {
+  background-color: #323131;
+  color: white;
+}
+
+#overview {
+  background-color: yellowgreen;
+}
+
+#overview.bg-overview {
+  background-color: orangered;
+  color: black;
+}
+
+.toggle-btn {
+  background-color: black;
+  color: white;
+  border: none;
+  border-radius: 0.2rem;
+  box-shadow: 0 8px 10px rgba(0, 0, 0, 0.12);
+}
+
+.highlight {
+  border-color: rgb(235, 198, 129);
+}
+
+.bg-color {
+  background-color: rgb(206, 147, 147);
+  color: black;
+}
+
+#range-level {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin-top: 20px;
+  box-shadow: 0 8px 10px rgba(0, 0, 0, 0.12);
+}
+
+.strikethrough {
+  color: gray;
+  text-decoration: line-through;
+}
+
+
+.check {
+  accent-color: green;
+  border-radius: 5em;
+}

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task Manager</title>
+    <link rel="stylesheet" href="./app.css">
+</head>
+
+<body>
+    <main class="container">
+        <header id="headers">
+            <button id="toggle-menu">Menu</button>
+            <nav class="navbar">
+                <a href="#">TaskFlow</a>
+                <aside id="aside-menu">
+                    <ul>
+                        <li>All Tasks</li>
+                        <li>Today</li>
+                        <li>Completed</li>
+                        <li>Important</li>
+                        <li>Settings</li>
+                        <li>About</li>
+                    </ul>
+                </aside>
+            </nav>
+            <div id="action-btn">
+                <button class="toggle-btn" id="dark-btn">Dark</button>
+                <button class="add-btn" id="addBtn">+</button>
+            </div>
+        </header>
+
+        <div class="task-info">
+            <div class="task-header">
+                <h1>All Tasks</h1>
+                <p><span class="total-task">0</span> <span class="update">task</span> in total</p>
+            </div>
+            <div id="search-header">
+                <input type="search" name="search" id="search" placeholder="Search for task...">
+                <input type="button" value="Search" id="search-btn">
+            </div>
+
+
+            <div class="task-details">
+                <div id="task-input">
+                    <input type="text" name="text" id="input" placeholder="What do you want to do?">
+                    <input type="button" value="Add" id="add">
+                </div>
+                <div id="task"></div>
+            </div>
+
+            <div>
+                <h2>Overview</h2>
+            </div>
+            <div id="overview">
+                <div class="first-column">
+                    <div class="total">
+                        <img src="./image/cards_icon.png" alt="">
+                        <span class="totalTask">0</span>
+                        <p>Total <span class="updateOverview">Task</span></p>
+                    </div>
+
+                    <div class="complete">
+                        <img src="./image/cards_icon.png" alt="">
+                        <span id="completed-tasks">0</span>
+                        <p>Completed</p>
+                    </div>
+                </div>
+
+                <div class="second-column">
+                    <div class="important">
+                        <img src="./image/cards_icon.png" alt="">
+                        <span id="importan-tasks">2</span>
+                        <p>Important</p>
+                    </div>
+
+                    <div class="due-today">
+                        <img src="./image/cards_icon.png" alt="">
+                        <span id="due-today">3</span>
+                        <p>Due Today</p>
+                    </div>
+                </div>
+            </div>
+
+            <input type="range" id="range-level">
+        </div>
+    </main>
+
+
+    <script src="./app.js"></script>
+</body>
+
+</html>
