@@ -158,13 +158,19 @@ add.addEventListener("click", () => {
             completeText.style.display = "flex"
             completeText.style.justifyContent = "flex-start"
             completeText.style.width = "0 auto"
-            completeCount += 1;
-            completeDisplay.textContent = completeCount;
         } else {
             TaskText.classList.remove("strikethrough")
             completeText.textContent = ""
             completeText.style.display = "none"
             TaskText.style.width = "auto"
+        }
+
+        if (inputcheckbox.checked) {
+            completeCount += 1;
+            completeDisplay.textContent = completeCount;
+        }
+
+        if (!inputcheckbox.checked) {
             completeCount -= 1;
             completeDisplay.textContent = completeCount;
         }
@@ -230,8 +236,13 @@ search.addEventListener('click', () => {
 
 task.addEventListener("click", (e) => {
     if (e.target.classList.contains('delete')) {
-        e.target.parentElement.remove();
-        if (task.children.length < totalCount) {
+
+
+        const inputcheckbox = document.createElement("input")
+        inputcheckbox.type = "checkbox"
+        inputcheckbox.name = "checkbox"
+
+        if (task.children.length <= totalCount) {
             totalCount -= 1;
             totalTask.textContent = totalCount;
             overviewTotal.textContent = totalCount;
@@ -240,13 +251,8 @@ task.addEventListener("click", (e) => {
             update.textContent = "task";
             updateOverview.textContent = "Task"
         }
-        const inputcheckbox = document.createElement("input")
-        inputcheckbox.type = "checkbox"
-        inputcheckbox.name = "checkbox"
-        if (!inputcheckbox.checked <= completeCount) {
-            completeCount -= 1;
-            completeDisplay.textContent = completeCount;
-            alert("Are you sure you want to remove?")
-        }
+        e.target.parentElement.remove();
     }
 })
+
+

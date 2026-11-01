@@ -192,6 +192,7 @@ input[type="text"] {
   padding-left: 10px;
   border: 1px solid black;
   border-radius: 0.2rem;
+  font-size: 16px;
 }
 
 #task-input #add {
@@ -219,6 +220,7 @@ input[type="text"] {
   margin: 0 6.5px 0 3px;
   border: 1px solid black;
   border-radius: 0.2rem;
+  font-size: 16px;
 }
 
 #search-btn {
@@ -269,7 +271,6 @@ input[type="text"] {
   color: gray;
   text-decoration: line-through;
 }
-
 
 .check {
   accent-color: green;
