@@ -37,6 +37,7 @@ addBtn.addEventListener("click", () => {
     button.textContent = "Delete"
     button.style.backgroundColor = "red"
     button.style.borderRadius = "0.10rem"
+    button.style.fontFamily = "sans-serif"
     button.style.border = "0px solid black"
     button.style.boxShadow = "2px 5px 15px 10px rgba(0, 0, 0, 0.12)"
     button.style.marginRight = "0.25em"
@@ -126,6 +127,7 @@ add.addEventListener("click", () => {
     button.style.marginRight = "0.25em"
     button.style.cursor = "pointer"
     button.style.color = "white"
+    button.style.fontSize = "1.15em"
 
 
     // List Styling helper
@@ -134,7 +136,6 @@ add.addEventListener("click", () => {
     newLi.style.justifyContent = 'flex-start'
     newLi.style.alignItems = 'center'
     newLi.style.gap = '0.5em'
-    newLi.style.margin = "0.25em";
     newLi.style.border = "0px solid black"
     newLi.style.borderRadius = "5px"
     newLi.style.backgroundColor = "white"
