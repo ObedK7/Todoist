@@ -127,8 +127,6 @@ add.addEventListener("click", () => {
     button.style.marginRight = "0.25em"
     button.style.cursor = "pointer"
     button.style.color = "white"
-    button.style.padding = "0.25em 0.5em"
-    button.style.fontSize = "1.1em"
 
 
     // List Styling helper
