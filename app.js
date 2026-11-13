@@ -12,6 +12,7 @@ const overviewTotal = document.querySelector(".totalTask")
 const update = document.querySelector(".update");
 const updateOverview = document.querySelector(".updateOverview");
 const completeDisplay = document.getElementById("completed-tasks")
+const progressBar = document.getElementById("progress-bar");
 
 
 addBtn.addEventListener("click", () => {
@@ -93,10 +94,15 @@ addBtn.addEventListener("click", () => {
     task.appendChild(newLi);
 })
 
-
-
 let totalCount = 0;
 let completeCount = 0;
+
+let value = 0;
+let max = 100;
+
+let calculation = (completeCount / totalCount) * max;
+
+
 
 add.addEventListener("click", () => {
     const inputValue = input.value;
@@ -112,7 +118,6 @@ add.addEventListener("click", () => {
         update.textContent = "tasks"
         updateOverview.textContent = "Tasks"
     }
-
 
 
 
@@ -135,6 +140,7 @@ add.addEventListener("click", () => {
     newLi.style.justifyContent = 'flex-start'
     newLi.style.alignItems = 'center'
     newLi.style.gap = '0.5em'
+    newLi.style.margin = "0.25em";
     newLi.style.border = "0px solid black"
     newLi.style.borderRadius = "5px"
     newLi.style.backgroundColor = "white"
@@ -147,6 +153,7 @@ add.addEventListener("click", () => {
     const inputcheckbox = document.createElement("input")
     inputcheckbox.type = "checkbox"
     inputcheckbox.name = "checkbox"
+    inputcheckbox.id = "checkbox"
     inputcheckbox.classList.add("check")
 
     inputcheckbox.addEventListener("change", () => {
@@ -155,6 +162,7 @@ add.addEventListener("click", () => {
             TaskText.classList.add("strikethrough")
             TaskText.style.width = "auto"
             completeText.textContent = "Completed"
+            TaskText.style.flex = "1"
             completeText.style.display = "flex"
             completeText.style.justifyContent = "flex-start"
             completeText.style.width = "0 auto"
@@ -163,6 +171,7 @@ add.addEventListener("click", () => {
             completeText.textContent = ""
             completeText.style.display = "none"
             TaskText.style.width = "auto"
+
         }
 
         if (inputcheckbox.checked) {
@@ -183,7 +192,6 @@ add.addEventListener("click", () => {
     const TaskText = document.createElement("p")
     TaskText.textContent = inputValue;
     TaskText.style.width = "auto";
-    TaskText.style.flex = "1"
     TaskText.style.margin = "0"
 
 
@@ -237,21 +245,25 @@ search.addEventListener('click', () => {
 task.addEventListener("click", (e) => {
     if (e.target.classList.contains('delete')) {
 
+        const taskItem = e.target.parentElement;
+        const inputcheckbox = taskItem.querySelector('input[type="checkbox"]');
 
-        const inputcheckbox = document.createElement("input")
-        inputcheckbox.type = "checkbox"
-        inputcheckbox.name = "checkbox"
+        totalCount -= 1;
+        totalTask.textContent = totalCount;
+        overviewTotal.textContent = totalCount;
 
-        if (task.children.length <= totalCount) {
-            totalCount -= 1;
-            totalTask.textContent = totalCount;
-            overviewTotal.textContent = totalCount;
-        }
         if (totalCount < 2) {
             update.textContent = "task";
             updateOverview.textContent = "Task"
         }
-        e.target.parentElement.remove();
+        if (!inputcheckbox.checked) {
+            completeDisplay.textContent = completeCount;
+        }
+        else {
+            completeCount -= 1;
+            completeDisplay.textContent = completeCount;
+        }
+        taskItem.remove();
     }
 })
 
