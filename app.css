@@ -47,6 +47,13 @@ header {
   box-shadow: 0 3px 8px rgba(0, 0, 0, 0.12);
 }
 
+#progressText {
+  margin-bottom: 0;
+  font-weight: bolder;
+  font-size: 2.25em;
+  font-family: sans-serif;
+}
+
 .first-column {
   display: flex;
   justify-content: center;
@@ -271,14 +278,14 @@ input[type="text"] {
   color: black;
 }
 
-#progress-bar {
+#taskProgress {
   accent-color: green;
   display: flex;
   justify-content: center;
   align-items: center;
   width: 100%;
   padding: 0.75em;
-  margin-top: 20px;
+  margin-top: 5px;
   box-shadow: 0 8px 10px rgba(0, 0, 0, 0.12);
 }
 
