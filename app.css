@@ -271,7 +271,7 @@ input[type="text"] {
   color: black;
 }
 
-#progress-bar {
+#taskProgress {
   accent-color: green;
   display: flex;
   justify-content: center;
